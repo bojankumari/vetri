@@ -1,0 +1,546 @@
+
+Release 13.4 - Simulation Model Generator Xilinx EDK 13.4 Build EDK_O.87xd
+ (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: simgen -p xc5vtx240tff1759-2 -lang verilog -intstyle default -lp
+/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/ -pe microblaze_0
+bootloops/microblaze_0.elf -msg __xps/ise/xmsgprops.lst -s isim -tb -m
+behavioral system_axisim.mhs 
+
+MHS file              : /.../projects/reference_nic/test/system_axisim.mhs
+Language (-lang)      : Verilog 
+Flow (-flow)      : ISE 
+Simulation Model (-m) : Behavioral
+Simulator (-s)        : ISE Simulator (ISIM)
+Part (-p) [ family ]  : xc5vtx240tff1759-2 [ virtex5 ]
+External memory simulation (-external_mem_sim) : FALSE 
+
+Output directory (-od):
+/local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/
+
+Library Path (-lp): /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/
+
+
+Simulation Model Generator started ...
+
+Reading MHS file ...
+lp : /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/
+
+Reading MPD definitions ...
+Instance name for AXI EMC core 
+
+Overriding IP level properties ...
+
+INTERNAL ERROR: C_FAMILY value virtex5 not supported by axi_interconnect.
+All data-path FIFOs (if any) are implemented as LUT RAM.
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 182 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 320 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 343 
+
+Computing clock values...
+INFO:EDK - Frequency for Top-Level Input Clock 'CLK' is not specified. Clock
+   DRCs will not be performed for IPs connected to that clock port, unless they
+   are connected through the clock generator IP. 
+
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi_interconnect_0
+  (0x41a00000-0x41a0ffff) axi_timebase_wdt_0	axi_interconnect_0
+  (0x75400000-0x7540ffff) nf10_nic_output_port_lookup_0	axi_interconnect_0
+  (0x78600000-0x7860ffff) nf10_identifier_0	axi_interconnect_0
+  (0x78a00000-0x78a0ffff) nf10_timestamp_0	axi_interconnect_0
+  (0x7a000000-0x7a00ffff) nf10_mdio_0	axi_interconnect_0
+  (0x7b408000-0x7b408fff) axi_cfg_fpga_0	axi_interconnect_0
+  (0x7c000000-0x7fffffff) axi_emc_0	axi_interconnect_0
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/lmb_v10_v1_0
+   0_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/lmb_v10_v1_0
+   0_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x4000 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/bram_block_v
+   1_00_a/data/bram_block_v2_1_0.mpd line 67 
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_0 - 2 master(s) : 8
+slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: microblaze_0_dlmb - 1 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l0_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l0_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 34 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l0_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l0_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 35 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l1_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l1_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 36 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l1_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l1_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 37 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l2_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l2_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 38 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l3_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l3_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 39 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l2_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l2_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 40 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_tx_l3_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_tx_l3_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 41 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l3_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l3_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 50 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l1_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l1_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 51 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l3_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l3_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 52 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l0_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l0_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 53 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l0_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l0_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 54 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l1_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l1_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 55 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l2_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l2_n - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 56 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_tx_l2_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_tx_l2_p - No driver found. Port will be driven to
+   GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 65 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_0_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_0_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 78 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_1_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_1_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 82 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_1_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_1_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 83 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_4_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_4_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 86 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_2_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_2_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 87 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_2_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_2_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 88 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_3_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_3_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 91 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_3_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_3_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 92 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_4_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_4_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 95 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_5_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_5_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 98 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_5_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_5_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 99 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_6_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_6_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 102 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_6_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_6_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 103 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_7_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_7_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 106 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_7_txp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_7_txp - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 107 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_0_txn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_0_txn - No driver found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 110 
+WARNING:EDK - PORT: EXT_BRK, CONNECTOR: Ext_BRK - No driver found. Port will be
+   driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 378 
+WARNING:EDK - PORT: EXT_NM_BRK, CONNECTOR: Ext_NM_BRK - No driver found. Port
+   will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 379 
+WARNING:EDK - PORT: IWAIT, CONNECTOR: microblaze_0_ilmb_LMB_Wait - No driver
+   found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 385 
+WARNING:EDK - PORT: ICE, CONNECTOR: microblaze_0_ilmb_LMB_CE - No driver found.
+   Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 386 
+WARNING:EDK - PORT: IUE, CONNECTOR: microblaze_0_ilmb_LMB_UE - No driver found.
+   Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 387 
+WARNING:EDK - PORT: DWAIT, CONNECTOR: microblaze_0_dlmb_LMB_Wait - No driver
+   found. Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 423 
+WARNING:EDK - PORT: DCE, CONNECTOR: microblaze_0_dlmb_LMB_CE - No driver found.
+   Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 424 
+WARNING:EDK - PORT: DUE, CONNECTOR: microblaze_0_dlmb_LMB_UE - No driver found.
+   Port will be driven to GND -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 425 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l0_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l0_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 42 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l1_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l1_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 43 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l1_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l1_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 44 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l2_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l2_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 45 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l2_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l2_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 46 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l3_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l3_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 47 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l3_n_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l3_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 48 
+WARNING:EDK - PORT: nf10_10g_interface_0_xaui_rx_l0_p_pin, CONNECTOR:
+   nf10_10g_interface_0_xaui_rx_l0_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 49 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l0_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l0_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 57 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l0_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l0_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 58 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l1_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l1_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 59 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l1_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l1_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 60 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l2_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l2_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 61 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l2_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l2_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 62 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l3_p_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l3_p - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 63 
+WARNING:EDK - PORT: nf10_10g_interface_1_xaui_rx_l3_n_pin, CONNECTOR:
+   nf10_10g_interface_1_xaui_rx_l3_n - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 64 
+WARNING:EDK - PORT: pcie_clk_p, CONNECTOR: pcie_top_0_pcie_clk_p - floating
+   connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 77 
+WARNING:EDK - PORT: pcie_clk_n, CONNECTOR: pcie_top_0_pcie_clk_n - floating
+   connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 79 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_0_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_0_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 80 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_0_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_0_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 81 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_1_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_1_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 84 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_1_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_1_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 85 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_2_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_2_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 89 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_2_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_2_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 90 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_3_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_3_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 93 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_3_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_3_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 94 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_4_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_4_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 96 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_4_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_4_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 97 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_5_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_5_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 100 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_5_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_5_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 101 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_6_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_6_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 104 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_6_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_6_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 105 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_7_rxn_pin, CONNECTOR:
+   pcie_top_0_pci_exp_7_rxn - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 108 
+WARNING:EDK - PORT: pcie_top_0_pci_exp_7_rxp_pin, CONNECTOR:
+   pcie_top_0_pci_exp_7_rxp - floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 109 
+WARNING:EDK - PORT: SINGLE_ENDED_INPUT, CONNECTOR: refclk_A - floating
+   connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 377 
+WARNING:EDK - PORT: SINGLE_ENDED_INPUT, CONNECTOR: refclk_B - floating
+   connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 385 
+WARNING:EDK - PORT: STAMP_COUNTER, CONNECTOR: nf10_timestamp_0_STAMP_COUNTER -
+   floating connection -
+   /local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/syste
+   m_axisim.mhs line 589 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi_interconnect_0.
+INFO:EDK - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_0 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/axi_intercon
+   nect_v1_02_a/data/axi_interconnect_v2_1_0.mpd line 137 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_AXI value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 215 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 0 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 318 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 0 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 341 
+INFO:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_i_bram_ctrl - tcl is
+   overriding PARAMETER C_MASK value to 0x40000000 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/lmb_bram_if_
+   cntlr_v2_10_b/data/lmb_bram_if_cntlr_v2_1_0.mpd line 75 
+INFO:EDK - IPNAME: lmb_bram_if_cntlr, INSTANCE:microblaze_0_d_bram_ctrl - tcl is
+   overriding PARAMETER C_MASK value to 0x40000000 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/lmb_bram_if_
+   cntlr_v2_10_b/data/lmb_bram_if_cntlr_v2_1_0.mpd line 75 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Port present in nf10_mdio_0
+
+Running UPDATE Tcl procedures for OPTION SIMGEN_SYSLEVEL_UPDATE_PROC...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:microblaze_0_bram_block -
+/local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/system_a
+xisim.mhs line 201 - elaborating IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+/local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/system_a
+xisim.mhs line 236 - elaborating IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+
+Generating simulation files ...
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+
+Constructing platform-level signal connectivity ...
+
+Writing HDL ...
+
+Writing BMM ...
+
+Writing memory initialization files ...
+
+Generating Memory Initialization Files ...
+
+Overriding IP level properties ...
+
+INTERNAL ERROR: C_FAMILY value virtex5 not supported by axi_interconnect.
+All data-path FIFOs (if any) are implemented as LUT RAM.
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ENDIANNESS value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 182 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ICACHE_USE_FSL value to 0 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 320 
+INFO:EDK - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_USE_FSL value to 0 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/microblaze_v
+   8_00_b/data/microblaze_v2_1_0.mpd line 343 
+
+Computing clock values...
+INFO:EDK - Frequency for Top-Level Input Clock 'CLK' is not specified. Clock
+   DRCs will not be performed for IPs connected to that clock port, unless they
+   are connected through the clock generator IP. 
+
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) microblaze_0_d_bram_ctrl	microblaze_0_dlmb
+  (0000000000-0x00003fff) microblaze_0_i_bram_ctrl	microblaze_0_ilmb
+  (0x40600000-0x4060ffff) RS232_Uart_1	axi_interconnect_0
+  (0x41a00000-0x41a0ffff) axi_timebase_wdt_0	axi_interconnect_0
+  (0x75400000-0x7540ffff) nf10_nic_output_port_lookup_0	axi_interconnect_0
+  (0x78600000-0x7860ffff) nf10_identifier_0	axi_interconnect_0
+  (0x78a00000-0x78a0ffff) nf10_timestamp_0	axi_interconnect_0
+  (0x7a000000-0x7a00ffff) nf10_mdio_0	axi_interconnect_0
+  (0x7b408000-0x7b408fff) axi_cfg_fpga_0	axi_interconnect_0
+  (0x7c000000-0x7fffffff) axi_emc_0	axi_interconnect_0
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_ilmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/lmb_v10_v1_0
+   0_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: lmb_v10, INSTANCE:microblaze_0_dlmb - tool is overriding
+   PARAMETER C_LMB_NUM_SLAVES value to 1 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/lmb_v10_v1_0
+   0_a/data/lmb_v10_v2_1_0.mpd line 70 
+INFO:EDK - IPNAME: bram_block, INSTANCE:microblaze_0_bram_block - tool is
+   overriding PARAMETER C_MEMSIZE value to 0x4000 -
+   /local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/xilinx/pcores/bram_block_v
+   1_00_a/data/bram_block_v2_1_0.mpd line 67 
+
+Checking platform address map ...
+Running Data2Mem with the following command:
+data2mem -bm system_axisim_sim.bmm  -bd
+/local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/bootloop
+s/microblaze_0.elf tag microblaze_0  -bx
+/local/scratch-1/nm525/workbench/ppon/vetri/projects/reference_nic/test/simulati
+on/behavioral -u   -p xc5vtx240tff1759-2 
+
+Generating simulator compile script ...
+
+Generating simulator helper scripts ...
+Simulation Model Generator done!
+

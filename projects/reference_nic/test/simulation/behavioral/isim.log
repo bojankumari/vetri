@@ -1,0 +1,134 @@
+ISim log file
+Running: ./isim_system_axisim -gui -tclbatch system_axisim_setup.tcl 
+ISim O.87xd (signature 0x8ddf5b5d)
+This is a Full version of ISim.
+WARNING: File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_nic_output_port_lookup_v1_10_a/hdl/verilog/nf10_nic_output_port_lookup.v" Line 521.  For instance nf10_nic_output_port_lookup_0/ipif_regs_inst/, width 161 of formal port rw_regs is not equal to width 160 of actual signal rw_regs.
+WARNING: File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_nic_output_port_lookup_v1_10_a/hdl/verilog/nf10_nic_output_port_lookup.v" Line 522.  For instance nf10_nic_output_port_lookup_0/ipif_regs_inst/, width 289 of formal port ro_regs is not equal to width 288 of actual signal ro_regs.
+WARNING: File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_identifier_v1_00_a/hdl/verilog/nf10_identifier.v" Line 93.  For instance nf10_identifier_0/ipif_regs_inst/, width 33 of formal port rw_regs is not equal to width 32 of actual signal rw_regs.
+WARNING: File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_identifier_v1_00_a/hdl/verilog/nf10_identifier.v" Line 94.  For instance nf10_identifier_0/ipif_regs_inst/, width 129 of formal port ro_regs is not equal to width 128 of actual signal ro_regs.
+WARNING: File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_timestamp_v1_00_a/hdl/verilog/nf10_timestamp.v" Line 103.  For instance nf10_timestamp_0/ipif_regs_inst/, width 33 of formal port rw_regs is not equal to width 32 of actual signal rw_regs.
+WARNING: File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_timestamp_v1_00_a/hdl/verilog/nf10_timestamp.v" Line 104.  For instance nf10_timestamp_0/ipif_regs_inst/, width 65 of formal port ro_regs is not equal to width 64 of actual signal ro_regs.
+Time resolution is 100 fs
+# proc w  
+  global  tbpath
+  global  PathSeparator
+  puts  "Setting up signal tracing ..."
+  source system_axisim_wave.tcl
+
+# proc w_top  
+  global  tbpath
+  global  PathSeparator
+  puts  "Setting up signal tracing ..."
+  set id [group add "Top level ports"]
+  source top_level_ports_wave.tcl
+
+# proc w_instance {design_instance_name } 
+  global  tbpath
+  global  PathSeparator
+  puts  "Setting up signal tracing ..."
+  wave add $design_instance_name
+
+# proc PrintHelpInformation  
+  puts "**********************************************************************"
+  puts "**********************************************************************"
+  puts "***"
+  puts "***   Simulation Setup Macros (system_axisim_setup.tcl)"
+  puts "***"
+  puts "***   w   =>  set up signal tracing for the ISE Simulator waveform"
+  puts "***           viewer (edit signal lists in system_axisim_wave.tcl)"
+  puts "***"
+  puts "***   w_top =>  Observe top level signals in the ISim Waveform Viewer"
+  puts "***"
+  puts "***   w_instance <<instance name>>  =>  Observe signals of the given instance in the ISim waveform viewer"
+  puts "***           (Example: w /system/dlm_cntrl to observe signals of dlmb controller)."
+  puts "***"
+  puts "***   h   =>  print this help menu"
+  puts "***"
+  puts "***   Default flow is: reset; w_top; run 1000ns or reset; w; run 1000ns"
+  puts "***"
+  puts "**********************************************************************"
+  puts "**********************************************************************"
+
+# proc h   PrintHelpInformation 
+# puts Setting up simulation commands ...
+# PrintHelpInformation
+# run 5us
+Simulator is doing circuit initialization process.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
+[                   0] : System Reset Asserted...
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_data/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_data/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/microblaze_0/microblaze_0/performance/Decode_I/PC_Module_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/microblaze_0/microblaze_0/performance/Decode_I/PreFetch_Buffer_I1/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/microblaze_0/microblaze_0/performance/Data_Flow_I/ : Warning: NUMERIC_STD."<": metavalue detected, returning FALSE
+at 0 fs, Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/axi_timebase_wdt_0/axi_timebase_wdt_0/TIMEBASE_WDT_CORE_I/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 fs, Instance /system_axisim_tb/dut/axi_timebase_wdt_0/axi_timebase_wdt_0/TIMEBASE_WDT_CORE_I/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 fs, Instance /system_axisim_tb/dut/axi_emc_0/axi_emc_0/AXI_EMC_NATIVE_INTERFACE_I/RDATA_FIFO_I/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 fs, Instance /system_axisim_tb/dut/axi_emc_0/axi_emc_0/AXI_EMC_NATIVE_INTERFACE_I/RDATA_FIFO_I/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+[             4950000] : System Reset De-asserted...
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_data/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_w_data/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/int_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/nf10_axi_sim_transactor_0/nf10_axi_sim_transactor_0/fifos/axi_r_addr/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505 ns(15), Instance /system_axisim_tb/dut/axi_timebase_wdt_0/axi_timebase_wdt_0/TIMEBASE_WDT_CORE_I/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 505100 ps(2), Instance /system_axisim_tb/dut/axi_emc_0/axi_emc_0/AXI_EMC_NATIVE_INTERFACE_I/RDATA_FIFO_I/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505100 ps(2), Instance /system_axisim_tb/dut/axi_emc_0/axi_emc_0/AXI_EMC_NATIVE_INTERFACE_I/RDATA_FIFO_I/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505100 ps(2), Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505100 ps(2), Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505100 ps(2), Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 505100 ps(2), Instance /system_axisim_tb/dut/RS232_Uart_1/RS232_Uart_1/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 1256250 ps(10): Note: Time is 1256 ns. (/system_axisim_tb/dut/stim_nf10_10g_interface_0_M_AXIS/stim_nf10_10g_interface_0_M_AXIS/).
+Info: Input file contains:
+Info: 1 barriers
+at 1256250 ps(10): Note: Time is 1256 ns. (/system_axisim_tb/dut/stim_nf10_10g_interface_1_M_AXIS/stim_nf10_10g_interface_1_M_AXIS/).
+Info: Input file contains:
+Info: 1 barriers
+at 1256250 ps(10): Note: Time is 1256 ns. (/system_axisim_tb/dut/stim_dma_0_M_AXIS/stim_dma_0_M_AXIS/).
+Info: Input file contains:
+Info: 1 barriers
+
+../../reg_expect.axi: end of stimuli @ 1265 ns.
+at 1268751 ps(10): Note: Time is 1268 ns. (/system_axisim_tb/dut/stim_nf10_10g_interface_0_M_AXIS/stim_nf10_10g_interface_0_M_AXIS/).
+Info: 0 ingress packets
+at 1268751 ps(10): Note: Time is 1268 ns. (/system_axisim_tb/dut/stim_nf10_10g_interface_1_M_AXIS/stim_nf10_10g_interface_1_M_AXIS/).
+Info: 0 ingress packets
+at 1268751 ps(10): Note: Time is 1268 ns. (/system_axisim_tb/dut/stim_dma_0_M_AXIS/stim_dma_0_M_AXIS/).
+Info: 0 ingress packets
+1275 ns. Info: barrier request transactor
+at 1275 ns(10): Note: Time is 1275 ns. (/system_axisim_tb/dut/stim_nf10_10g_interface_0_M_AXIS/stim_nf10_10g_interface_0_M_AXIS/).
+Info: barrier request: expecting 0 pkts
+at 1275 ns(10): Note: Time is 1275 ns. (/system_axisim_tb/dut/stim_nf10_10g_interface_1_M_AXIS/stim_nf10_10g_interface_1_M_AXIS/).
+Info: barrier request: expecting 0 pkts
+at 1275 ns(10): Note: Time is 1275 ns. (/system_axisim_tb/dut/stim_dma_0_M_AXIS/stim_dma_0_M_AXIS/).
+Info: barrier request: expecting 0 pkts
+                2776 system_axisim_tb.dut.nf10_barrier_0.nf10_barrier_0 Error: timeout exceeded waiting for barrier
+Stopped at time : 2776 ns : File "/local/scratch-1/nm525/workbench/ppon/vetri/lib/hw/std/pcores/nf10_barrier_v1_00_a/simhdl/verilog/nf10_barrier.v" Line 59
+# exit 0

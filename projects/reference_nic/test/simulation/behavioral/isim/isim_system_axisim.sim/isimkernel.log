@@ -1,0 +1,28 @@
+Command line:
+   isim_system_axisim
+     -simmode  gui
+     -simrunnum  0
+     -socket  60954
+
+Mon Feb  3 12:08:23 2014
+
+
+ Elaboration Time: 0.32 sec
+
+ Current Memory Usage: 356.397 Meg
+
+ Total Signals          : 25656
+ Total Nets             : 109387
+ Total Signal Drivers   : 12002
+ Total Blocks           : 3358
+ Total Primitive Blocks : 1802
+ Total Processes        : 12065
+ Total Traceable Variables  : 15943
+ Total Scalar Nets and Variables : 1520159
+
+ Total Simulation Time: 0.7 sec
+
+ Current Memory Usage: 426.029 Meg
+
+Mon Feb  3 12:25:39 2014
+
